@@ -24,8 +24,8 @@ body{
   $card-title-font-size: 24px;
   $card-subtitle-font-size: 17px;
   $footer-title-font-size: 18px;
-  $footer-content1-font-size: 16px;
-  $footer-content2-font-size: 16px;
+  $footer-txt1-font-size: 16px;
+  $footer-txt2-font-size: 16px;
 
   $header-title-font-weight: 400;
   $main-font-weight: 500;
@@ -34,8 +34,8 @@ body{
   $card-title-font-weight: 700;
   $card-subtitle-font-weight: 300;
   $footer-title-font-weight: 400;
-  $footer-content1-font-weight: 500;
-  $footer-content2-font-weight: 400;
+  $footer-txt1-font-weight: 500;
+  $footer-txt2-font-weight: 400;
 
   $header-title-line-height: 44px;
   $main-line-height: 19px;
@@ -44,8 +44,8 @@ body{
   $card-title-line-height: 28px;
   $card-subtitle-line-height: 20px;
   $footer-title-line-height: 26px;
-  $footer-content1-line-height: 19px;
-  $footer-content2-line-height: 19px;
+  $footer-txt1-line-height: 19px;
+  $footer-txt2-line-height: 19px;
 
   
 .header {
@@ -60,9 +60,11 @@ body{
         // display: flex;
         // justify-content: center;
         // &_&_icon{} 
+        
         @media (min-width: 768px){
-            height: 2.138rem;
+            height: 6rem;
         }
+
         &_logo{
             display: none;
         }
@@ -83,6 +85,8 @@ body{
             &_logo {
                 display: flex;
                 justify-content: center;
+                margin-top: 30px;
+                margin-bottom: 32px;
             }
          }
     }
@@ -129,6 +133,9 @@ body{
         border-radius: 1.563rem;
         background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        @media (min-width: 768px){
+            width: 13.625rem;
+        }
         .btn_lien{
             text-decoration: none; 
             display: block;
@@ -156,6 +163,9 @@ body{
         flex-direction: column;
         align-items: center;
         padding-right: 20px;
+        @media (min-width: 768px){
+            flex-direction: row;
+        }
         .btn{
             display: flex;
             align-items: center;
@@ -228,40 +238,84 @@ body{
     &_cards{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
+        @media (min-width: 768px){
+            &_cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 100px;
+                row-gap: 50px;
+            }
+        }
         .card{
             width: 340px;
             height:251px;
+            display: flex;
+
             &_lien{
                 display: block;
-                width: 100%;
-                height: 100%
-               
-            }
-            &_img{
                 width: 346px;
-                height: 231px;
-            }
-            &_badge{
+                height: 251px;
+                display: flex;
+                flex-direction: column;
 
-            }
-            &_conten{
-
-                .card_txt{
-
-                    .card_title{
-
-                    }
-                    .card_subtitle{
-
-                    }
+                .card_picture{
+                    width: 346px;
+                    height: 231px;
                 }
-                .card_like{
-                    
+                .card_badge{
+                    width: 80px;
+                    height: 29px;
+                    line-height: 29px;
+                    background-color: #99E2D0 ;
+                    color: #008766;
+                    z-index: 2;
+                    position: relative;
+                    left: 248px;
+                    bottom: 209px;
+
                 }
+                .card_conten{
+                    width: 100% ;
+                    display: flex;
+                    padding-top: 16px;
+    
+                    .card_txt{
+                        display: flex;
+                        flex-direction: column;
+                        .card_title{
+
+    
+                        }
+                        .card_subtitle{
+    
+                        }
+                    }
+                    .card_like{
+                        
+                    }
+                }    
+
             }
+            
            
 
         }
+    }
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    .footer_title{
+        font-family: $header-title-font-family;
+        font-size: $footer-title-font-size;
+        font-weight: $footer-title-font-weight;
+        line-height: $footer-title-line-height;
+    }
+    .footer_wrapper{
+
     }
 }
