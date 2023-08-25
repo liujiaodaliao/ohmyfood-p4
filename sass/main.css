@@ -169,6 +169,7 @@ h1 {
 }
 
 .function_btns .btn_icon {
+  font-size: 1rem;
   line-height: 100%;
   margin-left: 1.5rem;
   color: #7E7E7E;
@@ -178,6 +179,8 @@ h1 {
   line-height: 4.525rem;
   margin-left: 1.5rem;
   color: #000;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .menu_title {
