@@ -131,17 +131,18 @@ body{
         width: 58%;
         border: 0;
         border-radius: 1.563rem;
+        // 此处需要调整颜色格式
         background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         @media (min-width: 768px){
             width: 13.625rem;
         }
-        .btn_lien{
+        &_lien{
             text-decoration: none; 
             display: block;
             box-sizing: border-box;
         }
-        .btn_txt{
+        &_txt{
             font-size: $main-font-size;
             font-weight: $main-font-weight;
             line-height: 3.125rem;
@@ -239,16 +240,17 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media (min-width: 768px){
-            &_cards{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: center;
-                column-gap: 100px;
-                row-gap: 50px;
-            }
-        }
+    @media (min-width: 768px){
+        
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 100px;
+            row-gap: 50px;
+    
+    }
         .card{
             width: 340px;
             height:251px;
@@ -277,10 +279,11 @@ body{
                     bottom: 209px;
 
                 }
-                .card_conten{
+                .card_content{
                     width: 100% ;
                     display: flex;
                     padding-top: 16px;
+                    z-index: 10;
     
                     .card_txt{
                         display: flex;
@@ -309,6 +312,7 @@ body{
 footer{
     background-color: #000;
     color: #fff;
+    padding: 4px 25px 22px;
     .footer_title{
         font-family: $header-title-font-family;
         font-size: $footer-title-font-size;

@@ -108,13 +108,13 @@ h1 {
   }
 }
 
-.hero_btn .btn_lien {
+.hero_btn_lien {
   text-decoration: none;
   display: block;
   box-sizing: border-box;
 }
 
-.hero_btn .btn_txt {
+.hero_btn_txt {
   font-size: 16px;
   font-weight: 500;
   line-height: 3.125rem;
@@ -210,8 +210,9 @@ h1 {
 }
 
 @media (min-width: 768px) {
-  .menu_cards_cards {
+  .menu_cards {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -251,13 +252,14 @@ h1 {
   bottom: 209px;
 }
 
-.menu_cards .card_lien .card_conten {
+.menu_cards .card_lien .card_content {
   width: 100%;
   display: flex;
   padding-top: 16px;
+  z-index: 10;
 }
 
-.menu_cards .card_lien .card_conten .card_txt {
+.menu_cards .card_lien .card_content .card_txt {
   display: flex;
   flex-direction: column;
 }
@@ -265,6 +267,7 @@ h1 {
 footer {
   background-color: #000;
   color: #fff;
+  padding: 4px 25px 22px;
 }
 
 footer .footer_title {
