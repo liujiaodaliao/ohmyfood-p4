@@ -162,69 +162,48 @@ body{
     &_btns{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding-right: 20px;
         @media (min-width: 768px){
             flex-direction: row;
         }
+
         .btn{
-            display: flex;
-            align-items: center;
-            width: 92%;
-            height: 4.6rem;
+            width: 86%;
+            height: 4.525rem;
             border-radius: 1.25rem;
             margin-bottom: 1.563rem;
+            margin-left: 2rem;
+            background-color: #F6F6F6;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
+            &_lien{
+                text-decoration: none;
+                display: block;
+                display: flex;
+                align-items: center;
+            }
 
             &_number{
                 width: 1.5rem;
                 height: 1.5rem;
-                display: flex;
                 line-height: 1.5rem;
-                justify-content: center;
-                border-radius: 12px;
+                text-align: center;
+                border-radius: 0.75rem;
                 background-color: #9356DC;
                 color: #fff;
-                position: relative;
-                left: 12px;
-
-
+                margin-left: -0.75rem;
             }
-            // 按钮边距需要微调
-            &_content{
-                width: 100%;
-                height: 100%;
-                
-                padding: 0;
-                border: 0;
-                background-color: #F6F6F6;
-                border-radius: 20px;
-                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-                .btn_content_lien{
-                    text-decoration: none;
-                    display: flex;
-                    justify-content: center;
-
-                    .btn_icon{
-                        margin-right: 27px;
-                        display: flex;
-                        align-items: center;
-                        i{
-                            color: #7E7E7E;
-                        }
-                    }
-                    .lst_txt{
-                        line-height: 72px;
-                        display: flex;
-                        justify-self: center;
-                        font-size: $main-font-size;
-                        font-weight: $main-font-weight;
-                        line-height: $main-line-height;
-                        color: #000;
-                    }
-
-                }
+            &_icon{
+                line-height: 100%;
+                margin-left: 1.5rem;
+                color: #7E7E7E;
             }
+            &_txt{
+            line-height: 4.525rem;
+            margin-left: 1.5rem;
+            color: #000;
+            }
+
         }
 
     }
