@@ -172,6 +172,7 @@ h1 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    gap: 36px;
   }
 }
 .function_btns .btn {
@@ -189,6 +190,7 @@ h1 {
 @media (min-width: 768px) {
   .function_btns .btn {
     width: 22.6%;
+    margin-left: 0;
   }
 }
 .function_btns .btn_lien {
