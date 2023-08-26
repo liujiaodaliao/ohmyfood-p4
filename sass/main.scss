@@ -242,12 +242,16 @@ body{
 
 .menu{
     background-color: #F6F6F6;
-    padding-top: 3.375rem;
-    padding-left: 17px;
-    padding-right: 18px;
+    padding: 3.375rem 15px 66px 14px;
+    @media (min-width: 768px){
 
+    }
+padding: ??????????;
     &_title{
-        margin:0 0 28px;
+        margin:0 0 20px;
+        @media (min-width: 768px){
+            margin-bottom: 28px;
+        }    
     }
 
     &_cards{
@@ -256,84 +260,75 @@ body{
         align-items: center;
         gap: 18px;
     @media (min-width: 768px){
-        // display: flex;
-        // flex-direction: row;
-        // flex-wrap: wrap;
+        flex-direction: row;
+        flex-wrap: wrap;
         // justify-content: space-between;
         // align-items: center;
-        // column-gap: 100px;
-        // row-gap: 50px;
+        column-gap: 100px;
+        row-gap: 50px;
     
     }
 
         .card_link{
             display: block;
-            text-decoration: none;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;      
-        
-            .card_link .palette{
-                background: url(../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) cover center no-repeat ;
-        
-            }
-        
-            // .note{
-            //     background: url(../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) cover center no-repeat ;
-            // }
-               
-            // .francaise{
-            //     background: url(../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) cover center no-repeat ;
-            // }
-               
-            // .sens{
-            //     background: url(../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-            // }    
+            text-decoration: none;   
 
             .card{
-                width: 90.6%;
+                width: 100%;
                 height:251px;
-                display: flex;
-                flex-direction: column;
-                border-radius: 15px;               
+                border-radius: 15px;
+                background-color: #fff;
 
                 .card_badge{
-                    display: flex;
                     width: 80px;
                     height: 29px;
                     line-height: 29px;
                     text-align: center;
                     background-color: #99E2D0 ;
                     color: #008766;
-                    margin: 13px 12px 132px 248px;
-
+                    margin-left: 248px;
+                    position: relative;
+                    z-index: 10;
+                    margin-bottom: -48px;
                 }
+
+                .card_image{
+                    width: 340px;
+                    height: 69.3%;  //174px
+                    border: 3px #fff solid;
+                    border-radius: 15px 15px 0 0 ;   
+                }
+
                 .card_content{
                     width: 100% ;
-
+                    height: 30.7%;
                     display: flex;
-    
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: 0 0 15px 15px;
                     &_txt{
+                        margin-left: 13px;
                         display: flex;
                         flex-direction: column;
-                        &_title{
+                        justify-content: center;
+                        row-gap: 5px;
 
-    
+                        &_title{
+                        margin: 0 ;
                         }
                         &_subtitle{
-    
+                        font-size: $card-subtitle-font-size;
+                        margin: 0;
                         }
                     }
 
                     &_like{
-                       
+                        display: block;
                         font-size: 22px;
-                        line-height: 100%;
-                        background: linear-gradient(138.93deg, #9356DC 0%, #FF79DA 100%);
-                        display: flex;
-                        align-items: center;
-                        
+                        height: 21px;
+                        margin-right: 25px;
+                        position: relative;
+                        z-index: 9;
                     }
                 }    
 
