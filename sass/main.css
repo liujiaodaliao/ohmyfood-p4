@@ -108,7 +108,7 @@ h1 {
   }
 }
 
-.hero_btn_lien {
+.hero_btn_link {
   text-decoration: none;
   display: block;
   box-sizing: border-box;
@@ -171,7 +171,7 @@ h1 {
   }
 }
 
-.function_btns .btn_lien {
+.function_btns .btn_link {
   text-decoration: none;
   display: block;
   display: flex;
@@ -206,67 +206,70 @@ h1 {
 
 .menu {
   background-color: #F6F6F6;
+  padding-top: 3.375rem;
+  padding-left: 17px;
+  padding-right: 18px;
 }
 
 .menu_title {
-  margin-top: 3.375rem;
-  margin-left: 1.25rem;
+  margin: 0 0 28px;
 }
 
 .menu_cards {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 18px;
 }
 
-@media (min-width: 768px) {
-  .menu_cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 100px;
-    row-gap: 50px;
-  }
-}
-
-.menu_cards .card {
-  width: 340px;
-  height: 251px;
-  display: flex;
-}
-
-.menu_cards .card_lien {
+.menu_cards .card_link {
   display: block;
-  width: 346px;
-  height: 251px;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.menu_cards .card_lien_badge {
+.menu_cards .card_link .card_link .palette {
+  background: url(../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) cover center no-repeat;
+}
+
+.menu_cards .card_link .card {
+  width: 90.6%;
+  height: 251px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.menu_cards .card_link .card .card_badge {
+  display: flex;
   width: 80px;
   height: 29px;
   line-height: 29px;
+  text-align: center;
   background-color: #99E2D0;
   color: #008766;
-  z-index: 2;
-  position: relative;
-  left: 248px;
-  bottom: 209px;
+  margin: 13px 12px 132px 248px;
 }
 
-.menu_cards .card_lien .card_content {
+.menu_cards .card_link .card .card_content {
   width: 100%;
   display: flex;
-  padding-top: 16px;
-  z-index: 10;
 }
 
-.menu_cards .card_lien .card_content .card_txt {
+.menu_cards .card_link .card .card_content_txt {
   display: flex;
   flex-direction: column;
+}
+
+.menu_cards .card_link .card .card_content_like {
+  font-size: 22px;
+  line-height: 100%;
+  background: linear-gradient(138.93deg, #9356DC 0%, #FF79DA 100%);
+  display: flex;
+  align-items: center;
 }
 
 footer {

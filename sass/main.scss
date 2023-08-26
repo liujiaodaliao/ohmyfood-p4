@@ -68,6 +68,7 @@ body{
         &_logo{
             display: none;
         }
+
         &_title{
             // margin-left: 42px;
             text-align: center;
@@ -82,6 +83,7 @@ body{
             &_title{
                 display: none;
             }
+
             &_logo {
                 display: flex;
                 justify-content: center;
@@ -100,11 +102,13 @@ body{
     width: 100%;
    height: 3.125rem;   //50px
     background-color: $header_location-background-color;
+   
     .icon{
         display: flex;
         align-items: center;
         
     }
+
     &_txt{
         display: flex;
         margin-left: 1.063rem;
@@ -116,15 +120,18 @@ body{
     text-align: center;
     background-color: $hero-background-color;
     padding-top: 1.25rem;
+    
     &_title{
         margin-bottom: 0.625rem;
     }
+
     &_discover{
         font-size: $hero-paragraph-font-size;
         font-weight: $hero-paragraph-font-weight;
         line-height: $hero-paragraph-line-height;
         margin: 2px auto;
     }
+
     &_btn{
         margin: 1.688rem auto 3.563rem;
         height: 3.125rem;
@@ -137,11 +144,13 @@ body{
         @media (min-width: 768px){
             width: 13.625rem;
         }
-        &_lien{
+
+        &_link{
             text-decoration: none; 
             display: block;
             box-sizing: border-box;
         }
+
         &_txt{
             font-size: $main-font-size;
             font-weight: $main-font-weight;
@@ -166,6 +175,7 @@ body{
             margin-top: 3.125rem;
         }
     }
+
     &_btns{
         display: flex;
         flex-direction: column;
@@ -187,11 +197,11 @@ body{
             border-radius: 20px;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         @media (min-width: 768px){
-            width: 22.6%;
+             width: 22.6%;
             margin-left:0;
             }
-        
-            &_lien{
+
+            &_link{
                 text-decoration: none;
                 display: block;
                 display: flex;
@@ -208,12 +218,14 @@ body{
                 color: #fff;
                 margin-left: -0.75rem;
             }
+
             &_icon{
                 font-size: 1rem;
                 line-height: 100%;
                 margin-left: 1.5rem;
                 color: #7E7E7E;
             }
+
             &_txt{
             line-height: 4.525rem;
             margin-left: 1.5rem;
@@ -230,80 +242,106 @@ body{
 
 .menu{
     background-color: #F6F6F6;
+    padding-top: 3.375rem;
+    padding-left: 17px;
+    padding-right: 18px;
+
     &_title{
-        margin-top: 3.375rem;
-        margin-left: 1.25rem;
+        margin:0 0 28px;
     }
+
     &_cards{
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 18px;
     @media (min-width: 768px){
-        
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 100px;
-        row-gap: 50px;
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        // align-items: center;
+        // column-gap: 100px;
+        // row-gap: 50px;
     
     }
-        .card{
-            width: 340px;
-            height:251px;
-            display: flex;
 
-            &_lien{
-                display: block;
-                width: 346px;
-                height: 251px;
+        .card_link{
+            display: block;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;      
+        
+            .card_link .palette{
+                background: url(../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) cover center no-repeat ;
+        
+            }
+        
+            // .note{
+            //     background: url(../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) cover center no-repeat ;
+            // }
+               
+            // .francaise{
+            //     background: url(../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) cover center no-repeat ;
+            // }
+               
+            // .sens{
+            //     background: url(../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+            // }    
+
+            .card{
+                width: 90.6%;
+                height:251px;
                 display: flex;
                 flex-direction: column;
+                border-radius: 15px;               
 
-                // .card_picture{
-                //     width: 346px;
-                //     height: 231px;
-                // }
-                &_badge{
+                .card_badge{
+                    display: flex;
                     width: 80px;
                     height: 29px;
                     line-height: 29px;
+                    text-align: center;
                     background-color: #99E2D0 ;
                     color: #008766;
-                    z-index: 2;
-                    position: relative;
-                    left: 248px;
-                    bottom: 209px;
+                    margin: 13px 12px 132px 248px;
 
                 }
                 .card_content{
                     width: 100% ;
+
                     display: flex;
-                    padding-top: 16px;
-                    z-index: 10;
     
-                    .card_txt{
+                    &_txt{
                         display: flex;
                         flex-direction: column;
-                        .card_title{
+                        &_title{
 
     
                         }
-                        .card_subtitle{
+                        &_subtitle{
     
                         }
                     }
-                    .card_like{
+
+                    &_like{
+                       
+                        font-size: 22px;
+                        line-height: 100%;
+                        background: linear-gradient(138.93deg, #9356DC 0%, #FF79DA 100%);
+                        display: flex;
+                        align-items: center;
                         
                     }
                 }    
 
             }
-            
-           
-
         }
+
+
+        
     }
 }
 
@@ -321,3 +359,4 @@ footer{
 
     }
 }
+
