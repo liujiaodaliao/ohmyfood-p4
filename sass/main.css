@@ -23,6 +23,8 @@ h1 {
 .header_main {
   box-sizing: border-box;
   text-align: center;
+  width: 100%;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -40,8 +42,7 @@ h1 {
   font-size: 30px;
   font-weight: 400;
   line-height: 44px;
-  margin-top: 0.875rem;
-  margin-bottom: 4.5px;
+  margin: 0.875rem auto 4.5px;
 }
 
 @media (min-width: 768px) {
@@ -51,8 +52,7 @@ h1 {
   .header_main_logo {
     display: flex;
     justify-content: center;
-    margin-top: 1.875rem;
-    margin-bottom: 2rem;
+    margin: 1.875rem auto 2rem;
   }
 }
 
@@ -94,13 +94,12 @@ h1 {
 }
 
 .hero_btn {
+  padding: 0;
   margin: 1.688rem auto 3.563rem;
   height: 3.125rem;
   width: 58%;
   border: 0;
   border-radius: 1.563rem;
-  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 768px) {
@@ -110,9 +109,18 @@ h1 {
 }
 
 .hero_btn_link {
+  width: 100%;
   text-decoration: none;
   display: block;
   box-sizing: border-box;
+  border-radius: 1.563rem;
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
+}
+
+.hero_btn_link:hover {
+  background: linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.35);
 }
 
 .hero_btn_txt {
@@ -207,7 +215,7 @@ h1 {
 
 .menu {
   background-color: #F6F6F6;
-  padding: 3.375rem 0.938rem 4.125rem 0.875rem;
+  padding: 3.375rem 1.125rem 4.125rem 1.063rem;
 }
 
 .menu_title {
@@ -227,25 +235,33 @@ h1 {
   gap: 1.125rem;
 }
 
-@media (min-width: 768px) {
-  .menu_cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 100px;
-    row-gap: 50px;
-  }
-}
-
 .menu_cards .card_link {
+  width: 100%;
+  height: 100%;
   display: block;
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .menu_cards .card_link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
 .menu_cards .card_link .card {
-  width: 100%;
   height: 251px;
   border-radius: 15px;
   background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .menu_cards .card_link .card {
+    width: 33.8%;
+  }
 }
 
 .menu_cards .card_link .card .card_badge {
@@ -255,16 +271,16 @@ h1 {
   text-align: center;
   background-color: #99E2D0;
   color: #008766;
-  margin-left: 248px;
+  margin-right: 0.75rem;
+  margin-left: auto;
   position: relative;
   z-index: 10;
   margin-bottom: -48px;
 }
 
 .menu_cards .card_link .card .card_image {
-  width: 340px;
+  width: 100%;
   height: 69.3%;
-  border: 3px #fff solid;
   border-radius: 0.938rem 0.938rem 0 0;
 }
 
@@ -350,7 +366,12 @@ footer .footer_wrapper {
 
 footer .footer_wrapper .footer_lst {
   margin-top: 7px;
-  margin-left: 40px;
+}
+
+@media (min-width: 768px) {
+  footer .footer_wrapper .footer_lst {
+    margin-left: 40px;
+  }
 }
 
 footer .footer_wrapper .contact_link {
