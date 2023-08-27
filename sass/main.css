@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  box-sizing: border-box;
   min-width: 320px;
   max-width: 1440px;
 }
@@ -50,8 +51,8 @@ h1 {
   .header_main_logo {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 32px;
+    margin-top: 1.875rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -99,7 +100,7 @@ h1 {
   border: 0;
   border-radius: 1.563rem;
   background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 768px) {
@@ -128,7 +129,7 @@ h1 {
 
 .function_title {
   margin-top: 3rem;
-  margin-left: 20px;
+  margin-left: 1.25rem;
   margin-bottom: 26px;
 }
 
@@ -148,7 +149,7 @@ h1 {
   .function_btns {
     flex-direction: row;
     justify-content: center;
-    gap: 36px;
+    gap: 2.25rem;
   }
 }
 
@@ -160,8 +161,8 @@ h1 {
   margin-left: 2rem;
   padding: 0;
   background-color: #F6F6F6;
-  border-radius: 20px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 1.25rem;
+  box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -206,76 +207,114 @@ h1 {
 
 .menu {
   background-color: #F6F6F6;
-  padding-top: 3.375rem;
-  padding-left: 17px;
-  padding-right: 18px;
+  padding: 3.375rem 0.938rem 4.125rem 0.875rem;
 }
 
 .menu_title {
-  margin: 0 0 28px;
+  margin: 0 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .menu_title {
+    margin-bottom: 1.75rem;
+  }
 }
 
 .menu_cards {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .menu_cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 50px;
+  }
 }
 
 .menu_cards .card_link {
   display: block;
   text-decoration: none;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.menu_cards .card_link .card_link .palette {
-  background: url(../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) cover center no-repeat;
 }
 
 .menu_cards .card_link .card {
-  width: 90.6%;
+  width: 100%;
   height: 251px;
-  display: flex;
-  flex-direction: column;
   border-radius: 15px;
+  background-color: #fff;
 }
 
 .menu_cards .card_link .card .card_badge {
-  display: flex;
   width: 80px;
   height: 29px;
   line-height: 29px;
   text-align: center;
   background-color: #99E2D0;
   color: #008766;
-  margin: 13px 12px 132px 248px;
+  margin-left: 248px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -48px;
+}
+
+.menu_cards .card_link .card .card_image {
+  width: 340px;
+  height: 69.3%;
+  border: 3px #fff solid;
+  border-radius: 0.938rem 0.938rem 0 0;
 }
 
 .menu_cards .card_link .card .card_content {
   width: 100%;
+  height: 30.7%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 0.938rem 0.938rem;
 }
 
 .menu_cards .card_link .card .card_content_txt {
+  margin-left: 0.813rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+.menu_cards .card_link .card .card_content_txt_title {
+  margin: 0;
+}
+
+.menu_cards .card_link .card .card_content_txt_subtitle {
+  font-size: 17px;
+  margin: 0;
 }
 
 .menu_cards .card_link .card .card_content_like {
+  display: block;
   font-size: 22px;
-  line-height: 100%;
-  background: linear-gradient(138.93deg, #9356DC 0%, #FF79DA 100%);
-  display: flex;
-  align-items: center;
+  height: 21px;
+  margin-right: 25px;
+  position: relative;
+  z-index: 9;
 }
 
 footer {
-  background-color: #000;
+  background-color: #353535;
   color: #fff;
-  padding: 4px 25px 22px;
+  padding: 1.375rem 1.563rem;
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 1.875rem 1.563rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 footer .footer_title {
@@ -283,4 +322,44 @@ footer .footer_title {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  footer .footer_title {
+    margin-right: 2.563rem;
+    margin-left: 71px;
+  }
+}
+
+footer .footer_wrapper {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 9px;
+}
+
+@media (min-width: 768px) {
+  footer .footer_wrapper {
+    flex-direction: row;
+    margin: 0;
+  }
+}
+
+footer .footer_wrapper .footer_lst {
+  margin-top: 7px;
+  margin-left: 40px;
+}
+
+footer .footer_wrapper .contact_link {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .footer_wrapper .footer_icon {
+  font-size: 13px;
+  width: 12px;
+  margin-right: 11px;
 }

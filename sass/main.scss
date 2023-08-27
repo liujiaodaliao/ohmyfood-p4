@@ -3,6 +3,7 @@
   }
 body{
     margin: 0;
+    box-sizing: border-box;
     min-width: 320px;
     max-width: 1440px ;
 }
@@ -87,8 +88,8 @@ body{
             &_logo {
                 display: flex;
                 justify-content: center;
-                margin-top: 30px;
-                margin-bottom: 32px;
+                margin-top: 1.875rem;
+                margin-bottom: 2rem;
             }
          }
     }
@@ -140,7 +141,7 @@ body{
         border-radius: 1.563rem;
         // 此处需要调整颜色格式
         background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
         @media (min-width: 768px){
             width: 13.625rem;
         }
@@ -168,7 +169,7 @@ body{
 
     &_title{
         margin-top: 3rem;
-        margin-left: 20px;
+        margin-left: 1.25rem;
         margin-bottom: 26px;
         @media (min-width: 768px){
             margin-left: 7.5em;
@@ -182,7 +183,7 @@ body{
         @media (min-width: 768px){
             flex-direction: row;
             justify-content: center;
-            gap: 36px;
+            gap: 2.25rem;
             
         }
 
@@ -194,8 +195,8 @@ body{
             margin-left: 2rem;
             padding: 0;
             background-color: #F6F6F6;
-            border-radius: 20px;
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            border-radius: 1.25rem;
+            box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.15);
         @media (min-width: 768px){
              width: 22.6%;
             margin-left:0;
@@ -242,15 +243,15 @@ body{
 
 .menu{
     background-color: #F6F6F6;
-    padding: 3.375rem 15px 66px 14px;
+    padding: 3.375rem 0.938rem 4.125rem 0.875rem;
     @media (min-width: 768px){
-
+        // padding: ??????????;
     }
-padding: ??????????;
+
     &_title{
-        margin:0 0 20px;
+        margin:0 0 1.25rem;
         @media (min-width: 768px){
-            margin-bottom: 28px;
+            margin-bottom: 1.75rem;
         }    
     }
 
@@ -258,14 +259,14 @@ padding: ??????????;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 18px;
+        gap: 1.125rem;
     @media (min-width: 768px){
         flex-direction: row;
         flex-wrap: wrap;
         // justify-content: space-between;
         // align-items: center;
         column-gap: 100px;
-        row-gap: 50px;
+        row-gap: 50px;    //3.125em
     
     }
 
@@ -293,10 +294,14 @@ padding: ??????????;
                 }
 
                 .card_image{
-                    width: 340px;
+                    width: 340px;   //340px
                     height: 69.3%;  //174px
                     border: 3px #fff solid;
-                    border-radius: 15px 15px 0 0 ;   
+                    border-radius: 0.938rem 0.938rem 0 0 ;   
+                @media (min-width: 768px){
+                    
+                }
+
                 }
 
                 .card_content{
@@ -305,9 +310,9 @@ padding: ??????????;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    border-radius: 0 0 15px 15px;
+                    border-radius: 0 0 0.938rem 0.938rem;
                     &_txt{
-                        margin-left: 13px;
+                        margin-left: 0.813rem;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -341,17 +346,52 @@ padding: ??????????;
 }
 
 footer{
-    background-color: #000;
+    background-color: #353535;
     color: #fff;
-    padding: 4px 25px 22px;
+    padding: 1.375rem 1.563rem;
+    @media (min-width: 768px){
+    padding: 1.875rem 1.563rem;
+    display: flex;
+    flex-direction: row-reverse;
+    }
     .footer_title{
         font-family: $header-title-font-family;
         font-size: $footer-title-font-size;
         font-weight: $footer-title-font-weight;
         line-height: $footer-title-line-height;
+        margin: 0;
+        @media (min-width: 768px){
+        margin-right: 2.563rem;
+        margin-left: 71px;
+        }
     }
     .footer_wrapper{
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        
+        margin-top: 9px;
+        @media (min-width: 768px){
+        flex-direction: row; 
+        margin: 0;
+            
+        }
 
+        .footer_lst{
+            margin-top: 7px;
+            margin-left: 40px;
+        }  
+        .contact_link{
+            text-decoration: none;
+            color: #fff;
+        }  
+        .footer_icon{
+            font-size: 13px;
+            width: 12px;
+            margin-right: 11px;
+        }
     }
 }
 
