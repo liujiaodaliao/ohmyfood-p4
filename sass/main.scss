@@ -74,6 +74,7 @@ body{
             width: 30px;
             height: 30px;
             line-height: 30px;
+            margin-left: 17px;
             @media (min-width: 768px) {
             display: inline-block;
             position: relative;
@@ -109,6 +110,11 @@ body{
     .header_menu_images{
         width: 100%;
         height: 17.188rem;
+        z-index: -1;
+        @media (min-width: 768px) {
+            height: 397px; //pingpu
+            object-fit: cover;
+        }   
     }
 
 }
@@ -131,6 +137,8 @@ body{
         display: flex;
         margin-left: 1.063rem;
         align-items: center;
+        color: #353535;
+        font-weight: 500;
     }
 }
 
@@ -148,6 +156,7 @@ body{
         font-weight: $hero-paragraph-font-weight;
         line-height: $hero-paragraph-line-height;
         margin: 2px auto;
+        color: #353535;
     }
 
     &_btn{
@@ -299,6 +308,7 @@ body{
             height:100%;
             display: block;
             text-decoration: none; 
+            color: #000;
             @media (min-width: 768px){
                 width: 46.096%;
             }
@@ -371,6 +381,13 @@ body{
 
         
     }
+}
+
+// page palette
+.page_menu_container{
+    background-color: #F6F6F6;
+    border-radius: 40px 40px 0 0 ;
+    margin-top: -40px;
 }
 
 footer{
