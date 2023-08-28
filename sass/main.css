@@ -138,7 +138,7 @@ h1 {
 .function_title {
   margin-top: 3rem;
   margin-left: 1.25rem;
-  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
 }
 
 @media (min-width: 768px) {
@@ -218,6 +218,12 @@ h1 {
   padding: 3.375rem 1.125rem 4.125rem 1.063rem;
 }
 
+@media (min-width: 768px) {
+  .menu {
+    padding: 1.875rem 11.25rem;
+  }
+}
+
 .menu_title {
   margin: 0 0 1.25rem;
 }
@@ -235,6 +241,15 @@ h1 {
   gap: 1.125rem;
 }
 
+@media (min-width: 768px) {
+  .menu_cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 3.125rem;
+  }
+}
+
 .menu_cards .card_link {
   width: 100%;
   height: 100%;
@@ -244,30 +259,20 @@ h1 {
 
 @media (min-width: 768px) {
   .menu_cards .card_link {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    width: 46.096%;
   }
 }
 
 .menu_cards .card_link .card {
-  height: 251px;
-  border-radius: 15px;
+  height: 15.688rem;
+  border-radius: 0.938rem;
   background-color: #fff;
 }
 
-@media (min-width: 768px) {
-  .menu_cards .card_link .card {
-    width: 33.8%;
-  }
-}
-
 .menu_cards .card_link .card .card_badge {
-  width: 80px;
-  height: 29px;
-  line-height: 29px;
+  width: 5rem;
+  height: 1.813rem;
+  line-height: 1.813rem;
   text-align: center;
   background-color: #99E2D0;
   color: #008766;
@@ -275,7 +280,7 @@ h1 {
   margin-left: auto;
   position: relative;
   z-index: 10;
-  margin-bottom: -48px;
+  margin-bottom: -3rem;
 }
 
 .menu_cards .card_link .card .card_image {
@@ -312,9 +317,9 @@ h1 {
 
 .menu_cards .card_link .card .card_content_like {
   display: block;
-  font-size: 22px;
-  height: 21px;
-  margin-right: 25px;
+  font-size: 1.375rem;
+  height: 1.313rem;
+  margin-right: 1.563rem;
   position: relative;
   z-index: 9;
 }
@@ -344,7 +349,7 @@ footer .footer_title {
 @media (min-width: 768px) {
   footer .footer_title {
     margin-right: 2.563rem;
-    margin-left: 71px;
+    margin-left: 4.438rem;
   }
 }
 
@@ -354,7 +359,7 @@ footer .footer_wrapper {
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
-  margin-top: 9px;
+  margin-top: 0.563rem;
 }
 
 @media (min-width: 768px) {
@@ -365,12 +370,12 @@ footer .footer_wrapper {
 }
 
 footer .footer_wrapper .footer_lst {
-  margin-top: 7px;
+  margin-top: 0.438rem;
 }
 
 @media (min-width: 768px) {
   footer .footer_wrapper .footer_lst {
-    margin-left: 40px;
+    margin-left: 2.5rem;
   }
 }
 
@@ -380,7 +385,7 @@ footer .footer_wrapper .contact_link {
 }
 
 footer .footer_wrapper .footer_icon {
-  font-size: 13px;
-  width: 12px;
-  margin-right: 11px;
+  font-size: 0.813rem;
+  width: 0.75rem;
+  margin-right: 0.688rem;
 }
