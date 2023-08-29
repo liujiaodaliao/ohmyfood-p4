@@ -163,22 +163,25 @@ body{
     .hero_btn {
         display: block;
         width: 13.625rem;
-        margin: 27px auto 0;
+        margin: 1.688rem auto 0;
         border-radius: 100px;
         color: #fff;
         background-color: #686868;
         background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
         transition-duration: 0.5s;
         font-size: $main-font-size;
         font-weight: $main-font-weight;
         line-height: 3.125rem;
         text-decoration: none;
+        @media (min-width: 768px){
+            margin: 1.125rem auto 0;
+        }    
     }
       
     .hero_btn:hover {
         background-color: #fff;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.35);
     }
    
 }
@@ -319,8 +322,8 @@ body{
                 }
 
                 .card_image{
-                    width: 100%;   //340px
-                    height: 69.3%;  //174px
+                    width: 100%;   
+                    height: 69.3%;  
                     border-radius: 0.938rem 0.938rem 0 0 ; 
                     overflow: hidden;
                     object-fit: cover; 
@@ -371,8 +374,8 @@ body{
 // page palette
 .page_menu_container{
     background-color: #F6F6F6;
-    border-radius: 40px 40px 0 0 ;
-    margin-top: -40px;
+    border-radius: 2.5rem 2.5rem 0 0 ;
+    margin-top: -2.5rem;
 }
 
 footer{
