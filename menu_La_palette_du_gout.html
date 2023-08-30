@@ -46,111 +46,128 @@
       <img
         src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
         alt="menu_image_palette"
-        class="header_menu_images menu_image_palette"
+        class="menu_images menu_image_palette"
       />
     </header>
-    <section class="page_menu_container">
-      <div class="menu_title">
-        <h2 class="menu_title_txt">La palette du goût</h2>
-        <i class="fa-regular fa-heart card_content_like menu_title_like"></i>
-      </div>
-      <div class="menu_lst">
-        <div class="menu_lst_starter">
-          <p class="starter_txt">Entrées</p>
+    <section class="page_menu_main">
+      <header class="menu_header">
+        <h2 class="menu_header_title">La palette du goût</h2>
+        <!-- menuheader与主页一样的图标字体1或2个？
+          <i class="fa-2x fa-heart far menu__like menu__like--noBg"></i>
+          <i class="fa-2x fa-heart fas menu__like menu__like--bg"></i>
+         -->
+        <i class="fa-regular fa-heart card_content_like menu_header_like"></i>
+      </header>
+      <div class="submenus">
+        <section class="submenu">
+          <h3 class="submenu_title">Entrées</h3>
           <!--css设置全部大写字母 -->
-          <ul class="starter_box">
-            <li class="starter_item">
-              <div class="starter_detail">
-                <span class="starter_detail1"
-                  ><strong>Fricassée d'escargots</strong></span
-                >
-                <span class="starter_detail2">Au piment d'Espelette </span>
+          <ul class="menuitem_lst">
+            <li class="menuitem"><!--此处添加渐入类名？-->
+              <div class="menuitem_header">
+                <h3 class="menuitem_title">Fricassée d'escargots</h3>
+                <p class="menuitem_description">Au piment d'Espelette</p>
               </div>
-              <span class="starter_detail_price">25&euro;</span>
+              <p class="menuitem_price">25&euro;</p>
+              <div class="menuitem_confirmation"> <!--先隐藏-->
+                <i class="fa-sharp fa-regular fa-circle-check menuitem_icon" aria-hidden="true"></i> <!--icon先隐藏-->
+              </div>
             </li>
-            <li class="starter_item">
-              <div class="starter_detail">
-                <span class="starter_detail1"
-                  ><strong>Foie gras de canard mi-cuit</strong></span
-                >
-                <span class="starter_detail2">Et ses copeaux de truffe noire </span>
+            <li class="menuitem">
+              <div class="menuitem_header">
+                <h3 class="menuitem_title">Foie gras de canard mi-cuit</h3>
+                <p class="menuitem_description">Et ses copeaux de truffe noire</p>
               </div>
-              <span class="starter_detail_price">35&euro;</span>
+              <p class="menuitem_price">35&euro;</p>
+              <div class="menuitem_confirmation"> 
+                <i class="fa-sharp fa-regular fa-circle-check menuitem_icon" aria-hidden="true"></i> 
+              </div>
             </li>
-            <li class="starter_item">
-              <div class="starter_detail">
-                <span class="starter_detail1"
-                  ><strong>Œuf au plat</strong></span
-                >
-                <span class="starter_detail2">Assaisonné à la truffe sur lit de caviar </span>
+            <li class="menuitem">
+              <div class="menuitem_header">
+                <h3 class="menuitem_title">Œuf au plat</h3>
+                <p class="menuitem_description">Assaisonné à la truffe sur lit de caviar</p>
               </div>
-              <span class="starter_detail_price">20&euro;</span>
+              <p class="menuitem_price">20&euro;</p>
+              <div class="menuitem_confirmation"> 
+                <i class="fa-sharp fa-regular fa-circle-check menuitem_icon" aria-hidden="true"></i> 
+              </div>
             </li>
           </ul>
-        </div>
-        <div class="menu_lst_maindish">
-          <p class="maindish_txt">Plats</p>
-          <!--css设置全部大写字母 -->
-          <ul class="maindish_box">
-            <li class="maindish_item">
-              <div class="maindish_detail">
-                <span class="maindish_detail1"
-                  ><strong>Filet de bœuf aux herbes</strong></span
-                >
-                <span class="maindish_detail2">Accompagné de sa ribambelle de légumes</span>
+        </section>
+        <section class="submenu">
+          <h3 class="submenu_title">Plats</h3>
+          <ul class="menuitem_lst">
+            <li class="menuitem">
+              <div class="menuitem_header">
+                <h3 class="menuitem_title">Filet de bœuf aux herbes</h3>
+                <p class="menuitem_description">Accompagné de sa ribambelle de légumes</p>
               </div>
-              <span class="maindish_detail_price">40&euro;</span>
+              <p class="menuitem_price">40&euro;</p>
+              <div class="menuitem_confirmation">
+                <i class="fa-sharp fa-regular fa-circle-check menuitem_icon" aria-hidden="true"></i> 
+              </div>
             </li>
-            <li class="maindish_item">
-              <div class="maindish_detail">
-                <span class="maindish_detail1"
-                  ><strong>Parmentier de queue de bœuf</strong></span
-                >
-                <span class="maindish_detail2">À la truffe noire sur sa purée de panais</span>
+            <li class="menuitem">
+              <div class="menuitem_header">
+                <h3 class="menuitem_title">Parmentier de queue de bœuf</h3>
+                <p class="menuitem_description">À la truffe noire sur sa purée de panais</p>
               </div>
-              <span class="maindish_detail_price">35&euro;</span>
+              <p class="menuitem_price">35&euro;</p>
+              <div class="menuitem_confirmation"> 
+                <i class="fa-sharp fa-regular fa-circle-check menuitem_icon" aria-hidden="true"></i> 
+              </div>
             </li>
-            <li class="maindish_item">
-              <div class="maindish_detail">
-                <span class="maindish_detail1"
-                  ><strong>Filet de turbot</strong></span
-                >
-                <span class="maindish_detail2">Aux agrumes</span>
+            <li class="menuitem">
+              <div class="menuitem_header">
+                <h3 class="menuitem_title">Filet de turbot</h3>
+                <p class="menuitem_description">Aux agrumes</p>
               </div>
-              <span class="maindish_detail_price">44&euro;</span>
+              <p class="menuitem_price">44&euro;</p>
+              <div class="menuitem_confirmation"> 
+                <i class="fa-sharp fa-regular fa-circle-check menuitem_icon" aria-hidden="true"></i> 
+              </div>
             </li>
           </ul>
-        </div>
-        <div class="menu_lst_dessert">
-            <p class="dessert_txt">dessert</p><!--css设置全部大写字母 -->
-            <ul class="dessert_box">
-                <li class="dessert_item">
-                    <div class="dessert_detail">
-                        <span class="dessert_detail1"><strong>Paris-Brest</strong></span>
-                        <span class="dessert_detail2">Revisité</span>
-                    </div>
-                    <span class="dessert_detail_price">18&euro;</span>
-                </li>
-                <li class="dessert_item">
-                    <div class="dessert_detail">
-                        <span class="dessert_detail1"><strong>Macaron au chocolat d'exception</strong></span>
-                        <span class="dessert_detail2">Et glace à la vanille de Madagascar</span>
-                    </div>
-                    <span class="dessert_detail_price">22&euro;</span>
-                </li>
-                <li class="dessert_item">
-                    <div class="dessert_detail">
-                        <span class="dessert_detail1"><strong>Mousse au chocolat</strong></span>
-                        <span class="dessert_detail2">Au piment d'Espelette et à la truffe noire</span>
-                    </div>
-                    <span class="dessert_detail_price">23&euro;</span>
-                </li>
-            </ul>
-       </div>
+        </section>
+        <section class="submenu">
+          <h3 class="submenu_title">Desserts</h3>
+          <ul class="menuitem_lst">
+            <li class="menuitem">
+              <div class="menuitem_header">
+                <h3 class="menuitem_title">Paris-Brest</h3>
+                <p class="menuitem_description">Revisité</p>
+              </div>
+              <p class="menuitem_price">18&euro;</p>
+              <div class="menuitem_confirmation">
+                <i class="fa-sharp fa-regular fa-circle-check menuitem_icon" aria-hidden="true"></i> 
+              </div>
+            </li>
+            <li class="menuitem">
+              <div class="menuitem_header">
+                <h3 class="menuitem_title">Macaron au chocolat d'exception</h3>
+                <p class="menuitem_description">Et glace à la vanille de Madagascar</p>
+              </div>
+              <p class="menuitem_price">22&euro;</p>
+              <div class="menuitem_confirmation"> 
+                <i class="fa-sharp fa-regular fa-circle-check menuitem_icon" aria-hidden="true"></i> 
+              </div>
+            </li>
+            <li class="menuitem">
+              <div class="menuitem_header">
+                <h3 class="menuitem_title">Mousse au chocolat</h3>
+                <p class="menuitem_description">Au piment d'Espelette et à la truffe noire</p>
+              </div>
+              <p class="menuitem_price">23&euro;</p>
+              <div class="menuitem_confirmation"> 
+                <i class="fa-sharp fa-regular fa-circle-check menuitem_icon" aria-hidden="true"></i> 
+              </div>
+            </li>
+          </ul>
+        </section>
       </div>
-      <a href="#" class="hero_btn menu_btn_order">Commander</a>
+      <button class="menu_btn_order">Commander</button>
     </section>
-
     <footer>
       <h3 class="footer_title">ohmyfood</h3>
       <ul class="footer_wrapper">
