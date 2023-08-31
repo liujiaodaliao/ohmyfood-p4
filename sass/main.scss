@@ -48,6 +48,24 @@ body{
   $footer-txt1-line-height: 19px;
   $footer-txt2-line-height: 19px;
 
+  @mixin btn{
+    //与主页按钮样式大体一致
+    font-size: $main-font-size;
+    font-weight: $main-font-weight;
+    line-height: 3.125rem;
+    border-radius: 32px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    //以下设置过渡属性
+    transition-duration: 0.5s;
+  } 
+
+  @mixin btn_shadow {
+    background-color: #fff;
+    box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.35);
+  } 
+
   
 .header {
     display: flex;
@@ -56,10 +74,6 @@ body{
     align-items: center;
     width: 100%;
 
-    // .header_menu_main{
-        
-
-    // }
     &_main{
         display: flex;
         align-items: center;
@@ -93,7 +107,9 @@ body{
             font-size: $header-title-font-size;
             font-weight: $header-title-font-weight;
             line-height:  $header-title-line-height;
-            margin: 0.875rem auto 4.5px;
+            color: #101010;
+            margin:14px auto 4.5px;
+
         }
         
          @media (min-width: 768px){
@@ -108,8 +124,6 @@ body{
             }
          }
     }
-    
-
 }
 
 .location{
@@ -152,37 +166,38 @@ body{
         margin: 2px auto;
         color: #353535;
     }
-
+    // 按钮我直接写的<a href="#explo" class="hero_btn">Explorer nos restaurants</a>
     .hero_btn {
         display: block;
         width: 13.625rem;
         margin: 1.688rem auto 0;
-        border-radius: 100px;
-        color: #fff;
-        background-color: #686868;
-        background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-        box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
-        transition-duration: 0.5s;
-        font-size: $main-font-size;
-        font-weight: $main-font-weight;
-        line-height: 3.125rem;
         text-decoration: none;
         @media (min-width: 768px){
             margin: 1.125rem auto 0;
-        }    
+        }
+        //以下样式及过渡是按钮共同样式可以尝试设置自变量
+        // border-radius: 32px;
+        // color: #fff;
+        // font-size: $main-font-size;
+        // font-weight: $main-font-weight;
+        // line-height: 3.125rem;
+        // background-color: #686868;
+        // background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+        // box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
+        // transition-duration: 0.5s;
+        @include btn
     }
       
     .hero_btn:hover {
-        background-color: #fff;
-        box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.35);
-    }
-   
+        // background-color: #fff;
+        // box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.35);
+        @include btn_shadow
+    }  
 }
 
 .function{
     display: flex;
     flex-direction: column;
-
 
     &_title{
         margin-top: 3rem;
@@ -200,8 +215,7 @@ body{
         @media (min-width: 768px){
             flex-direction: row;
             justify-content: center;
-            gap: 2.25rem;
-            
+            gap: 2.25rem;           
         }
 
         .btn{
@@ -251,11 +265,8 @@ body{
             font-size: $main-font-size;
             font-weight: $main-font-weight;
             }
-
         }
-
     }
-    
 }
 
 .menu{
@@ -277,7 +288,6 @@ body{
         flex-direction: column;
         align-items: center;
         gap: 1.125rem;
-        
         @media (min-width: 768px){
         flex-direction: row;
         flex-wrap: wrap;
@@ -320,7 +330,6 @@ body{
                     border-radius: 0.938rem 0.938rem 0 0 ; 
                     overflow: hidden;
                     object-fit: cover; 
-
                 }
 
                 .card_content{
@@ -330,6 +339,7 @@ body{
                     align-items: center;
                     justify-content: space-between;
                     border-radius: 0 0 0.938rem 0.938rem;
+
                     &_txt{
                         margin-left: 0.813rem;
                         display: flex;
@@ -355,28 +365,159 @@ body{
                         z-index: 9;   //?????有必要吗？
                     }
                 }    
-
             }
-        }
-
-
-        
+        }   
     }
 }
 
 // code page-menu 
+.header_menu_link{
+    .header_menu_icon{
+        font-size: 20px;
+        position: absolute;
+        top:1rem;     
+    }
+}
+
+
+.header_menu_title{
+    margin-right: 89px;
+    margin-left: 42px;
+    @media (min-width: 768px){
+        margin-right: 621px;
+        // margin-left: 572px;
+    }
+}
 
 .menu_images{
   width: 100%;
+  object-fit: cover;
+  height:212px;
+  @media (min-width: 768px){
+    height:393px;
+  }
 }
 
 .page_menu_main{
     background-color: #F6F6F6;
-    border-radius: 2.5rem 2.5rem 0 0 ;
+    border-radius: 2rem 2rem 0 0 ;
+    position: relative;
+    margin-top: -3.125rem;
+    padding-bottom: 40px;
     @media (min-width: 768px){
         margin: -3.125rem 12rem 0;
     }
     
+    .menu_header{
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        // justify-content: space-between;
+        padding: 12px 17px 0;
+
+    
+        &_title{
+            font-family: $header-title-font-family;
+            font-size: 28px;
+            font-weight: 400;
+            color:#101010;
+            // margin-top:32px;
+
+        }
+        &_like{
+            margin-right: 24px;
+            
+            
+            
+            
+            opacity: 1;
+        } //小心心最后设计
+
+
+    }
+    .submenus{
+        margin: 0 0 40px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+
+        @media (min-width: 768px){
+            padding-left:211px;
+            padding-right: 211px;
+        }
+
+    
+        .submenu{
+            padding-left: 13px;
+            padding-right: 13px;
+
+            &_title{
+                margin:0;
+                position: relative;
+            }
+            &_title::after{
+                content: "";
+                width: 40px;
+                height: 3px;
+                background-color: #99E2D0;
+                position: absolute;
+                left: 0;
+                top:27px
+            }
+            .menuitem_lst{
+                margin: 0;
+                padding: 7px 0 0;
+                .menuitem{
+                    background-color: #fff;
+                    list-style: none;
+                    padding: 15px;
+                    // margin-left: 13px;
+                    // margin-right: 13px;
+                    margin-top:12px;
+                    border-radius: 15px;
+                    display: flex;
+                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+
+                    &_header{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 5px;
+
+                        .menuitem_title, .menuitem_description{
+                            margin: 0;
+                            white-space:nowrap;
+                            text-overflow:ellipsis;
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+      
+        
+
+    }
+
+    .menu_btn_order{
+        display: block;
+        margin: 40px auto 0;
+        border: 0;
+        padding: 0;
+        width: 11.625rem;
+        @media (min-width: 768px){
+        width: 17.6%;
+        }
+
+        @include btn
+    }
+    .menu_btn_order:hover{
+        // background-color: #fff;
+        // box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.35);
+        @include btn_shadow
+    }
 }
 
 footer{
@@ -409,8 +550,7 @@ footer{
         margin-top: 0.563rem;
         @media (min-width: 768px){
         flex-direction: row; 
-        margin: 0;
-            
+        margin: 0; 
         }
 
         .footer_lst{
@@ -419,10 +559,12 @@ footer{
                 margin-left: 2.5rem;
             }    
         }  
+
         .footer_link{
             text-decoration: none;
             color: #fff;
-        }  
+        } 
+
         .footer_icon{
             font-size: 0.813rem;
             width: 0.75rem;
