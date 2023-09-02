@@ -30,7 +30,7 @@ h1 {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header_main {
     height: 6rem;
   }
@@ -45,7 +45,7 @@ h1 {
   color: #000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header_main .header_menu_icon {
     display: inline-block;
     position: relative;
@@ -65,7 +65,7 @@ h1 {
   margin: 14px auto 4.5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header_main_title {
     display: none;
   }
@@ -129,10 +129,11 @@ h1 {
   color: #fff;
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
   transition-duration: 0.5s;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .hero .hero_btn {
     margin: 1.125rem auto 0;
   }
@@ -146,6 +147,13 @@ h1 {
 .function {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .function {
+    max-width: 1080px;
+  }
 }
 
 .function_title {
@@ -154,7 +162,7 @@ h1 {
   margin-bottom: 1.625rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .function_title {
     margin-left: 7.5em;
     margin-top: 3.125rem;
@@ -166,31 +174,22 @@ h1 {
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .function_btns {
     flex-direction: row;
-    justify-content: center;
-    gap: 2.25rem;
+    justify-content: space-between;
   }
 }
 
 .function_btns .btn {
-  width: 86%;
+  flex: 1;
   border: none;
   border-radius: 1.25rem;
-  margin-bottom: 1.563rem;
-  margin-left: 2rem;
+  margin: 0 20px 1.563rem;
   padding: 0;
   background-color: #F6F6F6;
   border-radius: 1.25rem;
   box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.15);
-}
-
-@media (min-width: 768px) {
-  .function_btns .btn {
-    width: 22.6%;
-    margin-left: 0;
-  }
 }
 
 .function_btns .btn_link {
@@ -231,9 +230,9 @@ h1 {
   padding: 3.375rem 1.125rem 4.125rem 1.063rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu {
-    padding: 1.875rem 11.25rem;
+    padding: 1.875rem 12.6%;
   }
 }
 
@@ -331,13 +330,53 @@ h1 {
   margin: 0;
 }
 
-.menu_cards .card_link .card .card_content_like {
-  display: block;
-  font-size: 1.375rem;
-  height: 1.313rem;
-  margin-right: 1.563rem;
+.menu_cards .card_link .card .card_content .card_btn {
+  height: 2rem;
+  width: 2rem;
+  border: 0 solid transparent;
+  padding: 0;
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   position: relative;
-  z-index: 9;
+  background-color: #000;
+}
+
+.menu_cards .card_link .card .card_content .card_btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: linear-gradient(175deg, #9356dc, #ff79da);
+  transition: 0.5s;
+}
+
+.menu_cards .card_link .card .card_content .card_like {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+  background-color: #fff;
+  transition-duration: 0.25s;
+}
+
+.menu_cards .card_link .card .card_content .card_btn:hover:before {
+  opacity: 1;
+}
+
+.menu_cards .card_link .card .card_content .card_btn:hover .card_like_up {
+  opacity: 0;
 }
 
 .header_menu_link .header_menu_icon {
@@ -351,7 +390,7 @@ h1 {
   margin-left: 42px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header_menu_title {
     margin-right: 621px;
   }
@@ -363,7 +402,7 @@ h1 {
   height: 212px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu_images {
     height: 393px;
   }
@@ -377,7 +416,7 @@ h1 {
   padding-bottom: 40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .page_menu_main {
     margin: -3.125rem 12rem 0;
   }
@@ -386,8 +425,15 @@ h1 {
 .page_menu_main .menu_header {
   display: flex;
   align-items: center;
-  column-gap: 24px;
+  justify-content: space-between;
   padding: 12px 17px 0;
+}
+
+@media (min-width: 1024px) {
+  .page_menu_main .menu_header {
+    justify-content: center;
+    column-gap: 1.5rem;
+  }
 }
 
 .page_menu_main .menu_header_title {
@@ -397,9 +443,53 @@ h1 {
   color: #101010;
 }
 
-.page_menu_main .menu_header_like {
-  margin-right: 24px;
+.page_menu_main .menu_header .card_btn {
+  height: 2rem;
+  width: 2rem;
+  border: 0 solid #f6f6f6;
+  padding: 0;
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #000;
+}
+
+.page_menu_main .menu_header .card_btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: linear-gradient(175deg, #9356dc, #ff79da);
+  transition: 0.5s;
+}
+
+.page_menu_main .menu_header .card_like {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+  background-color: #f6f6f6;
+  transition-duration: 0.25s;
+}
+
+.page_menu_main .menu_header .card_btn:hover:before {
   opacity: 1;
+}
+
+.page_menu_main .menu_header .card_btn:hover .card_like_up {
+  opacity: 0;
 }
 
 .page_menu_main .submenus {
@@ -409,7 +499,7 @@ h1 {
   row-gap: 40px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .page_menu_main .submenus {
     padding-left: 211px;
     padding-right: 211px;
@@ -455,12 +545,14 @@ h1 {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
+  flex: 1;
 }
 
 .page_menu_main .submenus .submenu .menuitem_lst .menuitem_header .menuitem_title, .page_menu_main .submenus .submenu .menuitem_lst .menuitem_header .menuitem_description {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .page_menu_main .menu_btn_order {
@@ -476,6 +568,7 @@ h1 {
   color: #fff;
   background-color: #686868;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
   transition-duration: 0.5s;
 }
 

@@ -57,6 +57,7 @@ body{
     color: #fff;
     background-color: #686868;
     background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
     //以下设置过渡属性
     transition-duration: 0.5s;
   } 
@@ -81,7 +82,7 @@ body{
         text-align: center;
         width: 100%;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-        @media (min-width: 768px){
+        @media (min-width: 1024px){
             height: 6rem;
         }
         .header_menu_icon{
@@ -91,7 +92,7 @@ body{
             font-weight: 900;
             margin-left: 17px;
             color: #000;
-            @media (min-width: 768px) {
+            @media (min-width: 1024px) {
             display: inline-block;
             position: relative;
             } 
@@ -112,7 +113,7 @@ body{
 
         }
         
-         @media (min-width: 768px){
+         @media (min-width: 1024px){
             &_title{
                 display: none;
             }
@@ -172,7 +173,7 @@ body{
         width: 13.625rem;
         margin: 1.688rem auto 0;
         text-decoration: none;
-        @media (min-width: 768px){
+        @media (min-width: 1024px){
             margin: 1.125rem auto 0;
         }
         //以下样式及过渡是按钮共同样式可以尝试设置自变量
@@ -198,12 +199,17 @@ body{
 .function{
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    @media (min-width: 1024px){
+        max-width: 1080px;
+    }
+
 
     &_title{
         margin-top: 3rem;
         margin-left: 1.25rem;
         margin-bottom: 1.625rem;
-        @media (min-width: 768px){
+        @media (min-width: 1024px){
             margin-left: 7.5em;
             margin-top: 3.125rem;
         }
@@ -212,26 +218,22 @@ body{
     &_btns{
         display: flex;
         flex-direction: column;
-        @media (min-width: 768px){
+        @media (min-width: 1024px){
             flex-direction: row;
-            justify-content: center;
-            gap: 2.25rem;           
+            justify-content: space-between;      
         }
 
         .btn{
-            width: 86%;
+            flex: 1;
+            // max-width: 86%;
             border: none;
             border-radius: 1.25rem;
-            margin-bottom: 1.563rem;
-            margin-left: 2rem;
+            margin: 0 20px 1.563rem;
+            // margin-bottom: 1.563rem;
             padding: 0;
             background-color: #F6F6F6;
             border-radius: 1.25rem;
             box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.15);
-        @media (min-width: 768px){
-             width: 22.6%;
-            margin-left:0;
-            }
 
             &_link{
                 text-decoration: none;
@@ -272,8 +274,9 @@ body{
 .menu{
     background-color: #F6F6F6;
     padding: 3.375rem 1.125rem 4.125rem 1.063rem;
-    @media (min-width: 768px){
-        padding: 1.875rem 11.25rem;
+
+    @media (min-width: 1024px){
+        padding: 1.875rem 12.6%;
     }
 
     &_title{
@@ -355,16 +358,59 @@ body{
                         margin: 0;
                         }
                     }
-
-                    &_like{
-                        display: block;
-                        font-size: 1.375rem;
-                        height: 1.313rem;
-                        margin-right: 1.563rem;
+                    
+                    //animation heart
+                    .card_btn {
+                        height: 2rem;
+                        width: 2rem;
+                        border: 0 solid transparent;
+                        padding: 0;
+                        margin-right: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
                         position: relative;
-                        z-index: 9;   //?????有必要吗？
+                        background-color: #000;
+                        //决定心形边框颜色
+                      }
+                
+                    .card_btn:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        opacity: 0;
+                        background: linear-gradient(175deg, #9356dc, #ff79da);
+                        transition: 0.5s;  
                     }
-                }    
+                
+                        .card_like {
+                            border: 0;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            mix-blend-mode: lighten;
+                            background-color: #fff;
+                            //menu #f6f6f6 homepage #fff
+                            transition-duration: 0.25s;
+                        }
+
+                    .card_btn:hover:before {
+                        opacity: 1;
+                    }
+                    .card_btn:hover .card_like_up {
+                        opacity: 0;
+                    }
+                //父母增加一个有渐变色背景色的伪元素，从父母有两个孩子，伪元素与两个孩子绝对定位重叠一起，层级为虚拟元素最高，其次老大和老二。老大过渡到透明，同时伪元素透明到不透明可见，透过老二内心,通过mix-blend-mode: lighten 外部依然是心形自身背景色
+                }  
             }
         }   
     }
@@ -379,11 +425,10 @@ body{
     }
 }
 
-
 .header_menu_title{
     margin-right: 89px;
     margin-left: 42px;
-    @media (min-width: 768px){
+    @media (min-width: 1024px){
         margin-right: 621px;
         // margin-left: 572px;
     }
@@ -393,7 +438,7 @@ body{
   width: 100%;
   object-fit: cover;
   height:212px;
-  @media (min-width: 768px){
+  @media (min-width: 1024px){
     height:393px;
   }
 }
@@ -404,16 +449,19 @@ body{
     position: relative;
     margin-top: -3.125rem;
     padding-bottom: 40px;
-    @media (min-width: 768px){
+    @media (min-width: 1024px){
         margin: -3.125rem 12rem 0;
     }
     
     .menu_header{
         display: flex;
         align-items: center;
-        column-gap: 24px;
-        // justify-content: space-between;
+        justify-content: space-between;
         padding: 12px 17px 0;
+        @media (min-width: 1024px){
+            justify-content:center; 
+            column-gap: 1.5rem;
+        }
 
     
         &_title{
@@ -424,15 +472,57 @@ body{
             // margin-top:32px;
 
         }
-        &_like{
-            margin-right: 24px;
-            
-            
-            
-            
-            opacity: 1;
-        } //小心心最后设计
+        //heart
+        .card_btn {
+            height: 2rem;
+            width: 2rem;
+            border: 0 solid #f6f6f6;
+            padding: 0;
+            margin-right: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            background-color: #000;
+            //决定心形边框颜色
+          }
+    
+        .card_btn:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            background: linear-gradient(175deg, #9356dc, #ff79da);
+            transition: 0.5s;  
+        }
+    
+            .card_like {
+                border: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                mix-blend-mode: lighten;
+                background-color: #f6f6f6;
+                //menu #f6f6f6 homepage #fff
+                transition-duration: 0.25s;
+            }
 
+        .card_btn:hover:before {
+            opacity: 1;
+        }
+        .card_btn:hover .card_like_up {
+            opacity: 0;
+        }
+        //heart
 
     }
     .submenus{
@@ -442,7 +532,7 @@ body{
         row-gap: 40px;
 
 
-        @media (min-width: 768px){
+        @media (min-width: 1024px){
             padding-left:211px;
             padding-right: 211px;
         }
@@ -483,11 +573,13 @@ body{
                         display: flex;
                         flex-direction: column;
                         row-gap: 5px;
+                        flex: 1;
 
                         .menuitem_title, .menuitem_description{
                             margin: 0;
                             white-space:nowrap;
                             text-overflow:ellipsis;
+                            overflow: hidden;
                         }
                     }
                 }
