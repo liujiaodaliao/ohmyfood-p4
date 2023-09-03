@@ -530,11 +530,13 @@ body{
         display: flex;
         flex-direction: column;
         row-gap: 40px;
+        padding:0;
 
 
         @media (min-width: 1024px){
-            padding-left:211px;
-            padding-right: 211px;
+            padding:0 211px 0;
+            // padding-left:211px;
+            // padding-right: 211px;
         }
 
     
@@ -569,6 +571,7 @@ body{
                     display: flex;
                     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
                     position: relative;
+                    overflow: hidden;
 
                     .st {
                         position: absolute;
@@ -578,6 +581,8 @@ body{
                         height: 100%;
                         opacity: 0;
                         z-index: 2;
+                        overflow: hidden;
+                        cursor: pointer;
                     }
 
                     &_header{
@@ -596,42 +601,54 @@ body{
 
                     .menuitem_right {
                         position: absolute;
-                        right: -68px;
+                        right: -66px;
                         top: 0;
                         height: 100%;
-                        line-height: 46px;
-                        color: #fff;
-                        background-color: transparent;
-                        width: 100px;
+                        line-height: 76px;
+                        color: #000;
+                        background-color: #fff;
+                        width: 110px;
                         border-radius: 10px;
-                        transition: all 0.5s ease;
-                        & i {
-                            width: 20px;
-                            height: 20px;
-                            background-color: #99e2d0;
+                        transition: all 1s ease;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        z-index:0 ;
+                        .menuitem_price{
+                            background-color: #fff;
+                            font-weight: 700;
+                            padding:auto 0 -15px;
+                        }
+                        .menuitem_confirmation {
+                            width: 60%;
+                            height: 100%;
+                            background-color: transparent ;
                             display: block;
                             position: absolute;
-                            top: 50%;
-                            right: 10px;
-                            margin-top: -10px;
-                            border-radius: 50px;
+                            top: 0;
+                            right: 0px;
+                            border-radius: 0 10px 10px 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            z-index: 1;
+                            font-size: 28px;
+                            .menuitem_icon{
+                                width: 28px;
+                                height: 28px;
+                                border-radius: 50%;
+                                color: #99e2d0;
+                            }
                           }
                     }
                     .st:hover + .menuitem_header + .menuitem_right {
-                        background-color: #99e2d0;
                         right: 0;
                     } 
-                }
-
+                } 
             }
-
-
         }
-      
-        
-
     }
-
+        
     .menu_btn_order{
         display: block;
         margin: 40px auto 0;
@@ -649,6 +666,11 @@ body{
         // box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.35);
         @include btn_shadow
     }
+
+    & h3::first-letter{
+        text-transform: uppercase;
+    } 
+ 
 }
 
 footer{
