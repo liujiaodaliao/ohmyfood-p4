@@ -543,23 +543,14 @@ h1 {
   overflow: hidden;
 }
 
-.page_menu_main .submenus .submenu .menuitem_lst .menuitem .st {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 2;
-  overflow: hidden;
-  cursor: pointer;
-}
-
 .page_menu_main .submenus .submenu .menuitem_lst .menuitem_header {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
   flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .page_menu_main .submenus .submenu .menuitem_lst .menuitem_header .menuitem_title, .page_menu_main .submenus .submenu .menuitem_lst .menuitem_header .menuitem_description {
@@ -569,16 +560,28 @@ h1 {
   overflow: hidden;
 }
 
+.page_menu_main .submenus .submenu .menuitem_lst .menuitem .st {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 5;
+  overflow: hidden;
+  cursor: pointer;
+}
+
 .page_menu_main .submenus .submenu .menuitem_lst .menuitem .menuitem_right {
   position: absolute;
   right: -66px;
   top: 0;
+  width: 110px;
   height: 100%;
   line-height: 76px;
+  border-radius: 10px;
   color: #000;
   background-color: #fff;
-  width: 110px;
-  border-radius: 10px;
   transition: all 1s ease;
   display: flex;
   justify-content: space-between;
@@ -595,7 +598,7 @@ h1 {
 .page_menu_main .submenus .submenu .menuitem_lst .menuitem .menuitem_right .menuitem_confirmation {
   width: 60%;
   height: 100%;
-  background-color: transparent;
+  background-color: #99e2d0;
   display: block;
   position: absolute;
   top: 0;
@@ -613,6 +616,16 @@ h1 {
   height: 28px;
   border-radius: 50%;
   color: #99e2d0;
+  z-index: 3;
+}
+
+.page_menu_main .submenus .submenu .menuitem_lst .menuitem .menuitem_right .menuitem_confirmation .white {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 2;
 }
 
 .page_menu_main .submenus .submenu .menuitem_lst .menuitem .st:hover + .menuitem_header + .menuitem_right {
