@@ -568,7 +568,7 @@ h1 {
   font-weight: 700;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end;
   margin: 0;
   transition: all 1s ease;
 }
