@@ -417,6 +417,21 @@ body{
 }
 
 // code page-menu 
+//animation loader
+
+// .back_b{
+//     opacity:0;
+
+// }
+// .back_a{
+// box-sizing: border-box;
+// opacity:1;
+// transition:all 3s ease-in-out;
+// background-color: #fff;
+// }
+
+
+
 .header_menu_link{
     .header_menu_icon{
         font-size: 20px;
@@ -566,10 +581,11 @@ body{
                     border-radius: 15px;
                     display: flex;
                     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-                    position: relative;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
                     overflow: hidden;
-                    cursor: pointer;
                     max-width: 100%;
+                    position: relative;
 
                     &_header{
                         display: flex;
@@ -610,7 +626,7 @@ body{
                         position: absolute;
                         top: 0;
                         right: -64px;
-                        transition: all 1s ease;
+                     transition: all 1s ease;
 
                         .menuitem_confirmation {
                             width: 1.75rem;
@@ -634,9 +650,10 @@ body{
                     &:hover .menuitem_price{
                         margin-right: 64px;
                     }
-                } 
-               
-            }
+
+                }  
+
+            }    
         }
     }
         
@@ -716,4 +733,3 @@ footer{
         }
     }
 }
-

@@ -539,10 +539,11 @@ h1 {
   border-radius: 15px;
   display: flex;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
-  cursor: pointer;
   max-width: 100%;
+  position: relative;
 }
 
 .page_menu_main .submenus .submenu .menuitem_lst .menuitem_header {
