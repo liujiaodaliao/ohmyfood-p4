@@ -262,9 +262,7 @@ h1 {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.menu_cards .card_link .card_link .palette {
-  background: url(../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) cover center no-repeat;
-}
+
 .menu_cards .card_link .card {
   width: 90.6%;
   height: 251px;
