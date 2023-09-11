@@ -485,19 +485,7 @@ h1 {
   background-color: #000;
 }
 
-.page_menu_main .menu_header .card_btn:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background: linear-gradient(175deg, #9356dc, #ff79da);
-  transition: 0.5s;
-}
-
-.page_menu_main .menu_header .card_like {
+.page_menu_main .menu_header .card_btn .card_like {
   border: 0;
   position: absolute;
   top: 0;
@@ -510,6 +498,18 @@ h1 {
   mix-blend-mode: lighten;
   background-color: #f6f6f6;
   transition-duration: 0.25s;
+}
+
+.page_menu_main .menu_header .card_btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: linear-gradient(175deg, #9356dc, #ff79da);
+  transition: 0.5s;
 }
 
 .page_menu_main .menu_header .card_btn:hover:before {
@@ -567,6 +567,7 @@ h1 {
 .page_menu_main .submenus .submenu_title {
   margin: 0;
   position: relative;
+  text-transform: uppercase;
 }
 
 .page_menu_main .submenus .submenu_title::after {

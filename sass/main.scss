@@ -49,7 +49,6 @@ body{
   $footer-txt2-line-height: 19px;
 
   @mixin btn{
-    //与主页按钮样式大体一致
     font-size: $main-font-size;
     font-weight: $main-font-weight;
     line-height: 3.125rem;
@@ -58,7 +57,6 @@ body{
     background-color: #686868;
     background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
     box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
-    //以下设置过渡属性
     transition-duration: 0.5s;
   } 
 
@@ -197,7 +195,7 @@ body{
         margin: 2px auto;
         color: #353535;
     }
-    // 按钮我直接写的<a href="#explo" class="hero_btn">Explorer nos restaurants</a>
+    // animation btn
     .hero_btn {
         display: block;
         width: 13.625rem;
@@ -206,22 +204,9 @@ body{
         @media (min-width: 1024px){
             margin: 1.125rem auto 0;
         }
-        //以下样式及过渡是按钮共同样式可以尝试设置自变量
-        // border-radius: 32px;
-        // color: #fff;
-        // font-size: $main-font-size;
-        // font-weight: $main-font-weight;
-        // line-height: 3.125rem;
-        // background-color: #686868;
-        // background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-        // box-shadow: 0px 4px 0.625rem 0px rgba(0, 0, 0, 0.25);
-        // transition-duration: 0.5s;
         @include btn
-    }
-      
+    }  
     .hero_btn:hover {
-        // background-color: #fff;
-        // box-shadow: 0px 4px 0.938rem 0px rgba(0, 0, 0, 0.35);
         @include btn_shadow
     }  
 }
@@ -233,7 +218,6 @@ body{
     @media (min-width: 1024px){
         max-width: 1080px;
     }
-
 
     &_title{
         margin-top: 3rem;
@@ -255,11 +239,9 @@ body{
 
         .btn{
             flex: 1;
-            // max-width: 86%;
             border: none;
             border-radius: 1.25rem;
             margin: 0 1.25rem 1.563rem;
-            // margin-bottom: 1.563rem;
             padding: 0;
             background-color: #F6F6F6;
             border-radius: 1.25rem;
@@ -402,7 +384,7 @@ body{
                         cursor: pointer;
                         position: relative;
                         background-color: #000;
-                        //决定心形边框颜色
+                        //心形边框色
                       }
                 
                     .card_btn:before {
@@ -429,7 +411,6 @@ body{
                             justify-content: center;
                             mix-blend-mode: lighten;
                             background-color: #fff;
-                            //menu #f6f6f6 homepage #fff
                             transition-duration: 0.25s;
                         }
 
@@ -461,7 +442,6 @@ body{
     margin-left: 42px;
     @media (min-width: 1024px){
         margin-right: 38.813rem;
-        // margin-left: 572px;
     }
 }
 
@@ -493,17 +473,15 @@ body{
             justify-content:center; 
             column-gap: 1.5rem;
         }
-
     
         &_title{
             font-family: $header-title-font-family;
             font-size: 1.75rem;
             font-weight: 400;
             color:#101010;
-            // margin-top:32px;
 
         }
-        //heart
+        // animation heart
         .card_btn {
             height: 2rem;
             width: 2rem;
@@ -516,21 +494,7 @@ body{
             cursor: pointer;
             position: relative;
             background-color: #000;
-            //决定心形边框颜色
-          }
-    
-        .card_btn:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            background: linear-gradient(175deg, #9356dc, #ff79da);
-            transition: 0.5s;  
-        }
-    
+            //心形边框颜色
             .card_like {
                 border: 0;
                 position: absolute;
@@ -543,18 +507,27 @@ body{
                 justify-content: center;
                 mix-blend-mode: lighten;
                 background-color: #f6f6f6;
-                //menu #f6f6f6 homepage #fff
                 transition-duration: 0.25s;
             }
-
+        }
+        .card_btn:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            background: linear-gradient(175deg, #9356dc, #ff79da);
+            transition: 0.5s;  
+        }
         .card_btn:hover:before {
             opacity: 1;
         }
         .card_btn:hover .card_like_up {
             opacity: 0;
         }
-        //heart
-
+        //animation heart
     }
     .submenus{
         margin: 0 0 2.5rem;
@@ -562,12 +535,9 @@ body{
         flex-direction: column;
         row-gap: 2.5rem;
         padding:0;
-
-
         @media (min-width: 1024px){
             padding:0 13.188rem 0;
         }
-
 
         @keyframes appear{
             from{
@@ -575,8 +545,7 @@ body{
             }
             to{
                 opacity:1;
-            }   
-            
+            }     
         }
         .delay_a{
             animation-delay: 0.2s;
@@ -594,12 +563,12 @@ body{
             animation-name: appear;
             animation-fill-mode: forwards;
             animation-duration: 3s;
-
             padding-left: 0.813rem;
             padding-right: 0.813rem;
             &_title{
                 margin:0;
                 position: relative;
+                text-transform: uppercase;
             }
             &_title::after{
                 content: "";
@@ -614,6 +583,7 @@ body{
                 margin: 0;
                 padding: 0.438rem 0 0;
 
+                //animation price slide
                 .menuitem{
                     background-color: #fff;
                     list-style: none;
@@ -690,9 +660,7 @@ body{
                     &:hover .menuitem_price{
                         margin-right: 4rem;
                     }
-
                 }  
-
             }    
         }
     }
@@ -718,7 +686,6 @@ body{
     & h3::first-letter{
         text-transform: uppercase;
     } 
- 
 }
 
 footer{

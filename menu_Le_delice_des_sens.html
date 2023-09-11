@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu - Le délice des sens</title>
 
     <!-- google font -->
@@ -29,30 +29,225 @@
     />
 
     <link rel="stylesheet" href="./sass/main.css" />
-</head>
-<body>
+  </head>
+  <body>
+      <header class="header">
+        <div class="header_main header_menu_main">
+          <a href="./index.html" class="header_menu_link">
+            <i class="fa-solid fa-arrow-left header_menu_icon"></i>
+          </a>
+          <h1 class="header_main_title header_menu_tile">ohmyfood</h1>
+          <img
+            class="header_main_logo"
+            src="./assets/images/logo/ohmyfood@2x.svg"
+            alt="logo"
+          />
+        </div>
+        <img
+          src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+          alt="menu_image_sens"
+          class="menu_images menu_image_sens"
+        />
+      </header>
+      <section class="page_menu_main">
+        <header class="menu_header">
+          <h2 class="menu_header_title">Le délice des sens</h2>
+          <!-- heart -->
+          <div class="card_btn">
+            <i class="fa-2x fa-heart far card_like card_like_up"></i>
+            <i class="fa-2x fa-heart fas card_like card_like_down"></i>
+          </div>
+        </header>
+        <div class="submenus">
+          <section class="submenu delay_a">
+            <h3 class="submenu_title">Entrées</h3>
+            <ul class="menuitem_lst">
+              <li class="menuitem delay_1">
+                <div class="menuitem_header">
+                  <h3 class="menuitem_title">Tartare de thon</h3>
+                  <p class="menuitem_description">Assaisonné au yuzu</p>
+                </div>
+                <p class="menuitem_price">25&euro;</p>
+                <div class="menuitem_right">
+                  <div class="menuitem_confirmation">
+                    <i
+                      class="fa-sharp fa-regular fa-circle-check menuitem_icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+              <li class="menuitem delay_2">
+                <div class="menuitem_header">
+                  <h3 class="menuitem_title">Bouchée de homard croustillant</h3>
+                  <p class="menuitem_description">
+                    Et sa farandole de petits légumes
+                  </p>
+                </div>
+                <p class="menuitem_price">35&euro;</p>
+                <div class="menuitem_right">
+                  <div class="menuitem_confirmation">
+                    <i
+                      class="fa-sharp fa-regular fa-circle-check menuitem_icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+              <li class="menuitem delay_3">
+                <div class="menuitem_header">
+                  <h3 class="menuitem_title">Velouté de cèpes</h3>
+                  <p class="menuitem_description">
+                    Aux truffes
+                  </p>
+                </div>
+                <p class="menuitem_price">20&euro;</p>
+                <div class="menuitem_right">
+                  <div class="menuitem_confirmation">
+                    <i
+                      class="fa-sharp fa-regular fa-circle-check menuitem_icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="submenu delay_b">
+            <h3 class="submenu_title">Plats</h3>
+            <ul class="menuitem_lst">
+              <li class="menuitem delay_4">
+                <div class="menuitem_header">
+                  <h3 class="menuitem_title">Poulet rôti aux herbes de Provence</h3>
+                  <p class="menuitem_description">
+                    Et sa crème de truffe
+                  </p>
+                </div>
+                <p class="menuitem_price">40&euro;</p>
+                <div class="menuitem_right">
+                  <div class="menuitem_confirmation">
+                    <i
+                      class="fa-sharp fa-regular fa-circle-check menuitem_icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+              <li class="menuitem delay_5">
+                <div class="menuitem_header">
+                  <h3 class="menuitem_title">Langouste rôtie </h3>
+                  <p class="menuitem_description">
+                    Et ses légumes de saison
+                  </p>
+                </div>
+                <p class="menuitem_price">35&euro;</p>
+                <div class="menuitem_right">
+                  <div class="menuitem_confirmation">
+                    <i
+                      class="fa-sharp fa-regular fa-circle-check menuitem_icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+              <li class="menuitem delay_6">
+                <div class="menuitem_header">
+                  <h3 class="menuitem_title">Côte de bœuf Angus</h3>
+                  <p class="menuitem_description">Et sa purée de panais</p>
+                </div>
+                <p class="menuitem_price">44&euro;</p>
+                <div class="menuitem_right">
+                  <div class="menuitem_confirmation">
+                    <i
+                      class="fa-sharp fa-regular fa-circle-check menuitem_icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="submenu delay_c">
+            <h3 class="submenu_title">Desserts</h3>
+            <ul class="menuitem_lst">
+              <li class="menuitem delay_7">
+                <div class="menuitem_header">
+                  <h3 class="menuitem_title">Farandole de desserts</h3>
+                  <p class="menuitem_description">Du chef</p>
+                </div>
+                <p class="menuitem_price">18&euro;</p>
+                <div class="menuitem_right">
+                  <div class="menuitem_confirmation">
+                    <i
+                      class="fa-sharp fa-regular fa-circle-check menuitem_icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+              <li class="menuitem delay_8">
+                <div class="menuitem_header">
+                  <h3 class="menuitem_title">
+                    Crème brulée
+                  </h3>
+                  <p class="menuitem_description">
+                    Revisitée
+                  </p>
+                </div>
+                <p class="menuitem_price">22&euro;</p>
+                <div class="menuitem_right">
+                  <div class="menuitem_confirmation">
+                    <i
+                      class="fa-sharp fa-regular fa-circle-check menuitem_icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+              <li class="menuitem delay_9">
+                <div class="menuitem_header">
+                  <h3 class="menuitem_title">Tiramisu</h3>
+                  <p class="menuitem_description">
+                    À la noisette
+                  </p>
+                </div>
+                <p class="menuitem_price">23&euro;</p>
+                <div class="menuitem_right">
+                  <div class="menuitem_confirmation">
+                    <i
+                      class="fa-sharp fa-regular fa-circle-check menuitem_icon"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <button class="menu_btn_order">Commander</button>
+      </section>
+      <footer>
 
-
-  <footer>
-    <h3 class="footer_title">ohmyfood</h3>
-    <ul class="footer_wrapper">
-      <li class="footer_lst lst_propos">
-        <i class="fa-solid fa-utensils footer_icon"></i>
-        <span class="footer_txt1">Proposer un restaurant</span>
-      </li>
-      <li class="footer_lst">
-        <i class="fa-solid fa-handshake-angle footer_icon"></i>
-        <span class="footer_txt1">Devenir partenaire</span>
-      </li>
-      <li class="footer_lst">
-        <span class="footer_txt2">Mentions légales</span>
-      </li>
-      <li class="footer_lst lst-contact">
-        <a class="footer_link" href="mailto:contact@ohmyfood.com">Contact</a>
-      </li>
-    </ul>
-  </footer>
-    
-    
-</body>
+        <h3 class="footer_title">ohmyfood</h3>
+        <ul class="footer_wrapper">
+          <li class="footer_lst lst_propos">
+            <i class="fa-solid fa-utensils footer_icon"></i>
+            <span class="footer_txt1">Proposer un restaurant</span>
+          </li>
+          <li class="footer_lst">
+            <i class="fa-solid fa-handshake-angle footer_icon"></i>
+            <span class="footer_txt1">Devenir partenaire</span>
+          </li>
+          <li class="footer_lst">
+            <span class="footer_txt2">Mentions légales</span>
+          </li>
+          <li class="footer_lst lst-contact">
+            <a class="footer_link" href="mailto:contact@ohmyfood.com"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </footer>
+      
+  </body>
 </html>
