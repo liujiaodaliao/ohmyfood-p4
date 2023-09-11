@@ -18,6 +18,10 @@ h1 {
     opacity: 1;
     background: #fff;
   }
+  60% {
+    opacity: 1;
+    background: #fff;
+  }
   100% {
     opacity: 0;
     display: none;
@@ -39,6 +43,25 @@ h1 {
   pointer-events: none;
   animation-fill-mode: forwards;
   animation: loader 3s ease-in-out;
+}
+
+@keyframes turn {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader .loader_gif {
+  animation: turn 3s ease-in-out;
+  animation-fill-mode: forwards;
+  width: 5rem;
+  height: 5rem;
 }
 
 .header {
